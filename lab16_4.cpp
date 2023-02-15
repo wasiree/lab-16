@@ -17,3 +17,19 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &A,int &B,int &C,int &D){
+	int x,y,z[] = {A,B,C,D};
+
+	for(int i = 0; i < 4; i++){
+		x = z[i];
+		y = rand()%4;
+		z[i] = z[y];
+		z[y] = x;
+	}
+	A = z[0];
+	B = z[1];
+	C = z[2];
+	D = z[3];
+}
+
